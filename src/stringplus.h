@@ -19,7 +19,7 @@ using namespace std;
 namespace stringplus {
 
   /*
-  * Replaces lower case alphabetical chars to upper case
+  * Replaces lower case alphabetical chars with upper case
   * Example: "abcd" -> 'ABCD'
   */
   string to_upper(const string& str) {
