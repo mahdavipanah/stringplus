@@ -37,6 +37,18 @@ namespace stringplus {
     for_each(ret_val.begin(), ret_val.end(), [](char& c) { c = (char)tolower(c);});
     return ret_val;
   }
+
+  /*
+  * Returns true if all chars in the string are alphabetical
+  * Example: "abcd" -> true
+  * Example: "Abn4" -> false
+  */
+  bool is_alpha(const string& str) {
+    for(char c : str)
+      if(!isalpha(c))
+        return false;
+    return true;
+  }
 } // stringplus
 
 #endif // STRINGPLUS_H
