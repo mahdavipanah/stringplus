@@ -27,6 +27,16 @@ namespace stringplus {
     for_each(ret_val.begin(), ret_val.end(), [](char& c) { c = (char)toupper(c);});
     return ret_val;
   }
-}
+
+  /*
+  * Replaces upper case alphabetical chars with lower case
+  * Example: "ABCD" -> 'abcd'
+  */
+  string to_lower(const string& str) {
+    string ret_val = str;
+    for_each(ret_val.begin(), ret_val.end(), [](char& c) { c = (char)tolower(c);});
+    return ret_val;
+  }
+} // stringplus
 
 #endif // STRINGPLUS_H
