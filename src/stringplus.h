@@ -104,7 +104,7 @@ namespace stringplus {
   }
 
   /*
-  * Converts first letter of the string to uppercase.
+  * Converts first letter of the string to uppercase
   * If true is passed as second argument the rest of the string will be converted to lower case
   * Example: "abcd" -> "Abcd"
   * Example: "aBCD" -> "ABCD"
@@ -117,6 +117,16 @@ namespace stringplus {
       for_each(ret_val.begin() + 1, ret_val.end(), [](char& c) {
         c = tolower(c);
       });
+    return ret_val;
+  }
+
+  /*
+  * Converts first letter of the string to lowercase
+  * Example: "ABCD" -> "aBCD"
+  */
+  string decapitalize(const string& str) {
+    string ret_val = str;
+    ret_val[0] = tolower(ret_val[0]);
     return ret_val;
   }
 } // stringplus
