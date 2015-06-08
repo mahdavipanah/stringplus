@@ -49,6 +49,18 @@ namespace stringplus {
         return false;
     return true;
   }
+
+  /*
+  * Returns true if all chars in the string are digits
+  * Example: "1234" -> true
+  * Example: "34n4" -> false
+  */
+  bool is_digit(const string& str) {
+    for(char c : str)
+      if(!isdigit(c))
+        return false;
+    return true;
+  }
 } // stringplus
 
 #endif // STRINGPLUS_H
