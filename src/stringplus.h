@@ -61,6 +61,19 @@ namespace stringplus {
         return false;
     return true;
   }
+
+  /*
+  * Returns true if all chars in the string are digits or an uppercase or lowercase letter
+  * Example: "1234" -> true
+  * Example: "34n4" -> true
+  * Example: "34n[" -> false
+  */
+  bool is_alpha_digit(const string& str) {
+    for(char c : str)
+      if(!isalnum(c))
+        return false;
+    return true;
+  }
 } // stringplus
 
 #endif // STRINGPLUS_H
