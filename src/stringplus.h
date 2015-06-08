@@ -88,6 +88,20 @@ namespace stringplus {
           return false;
     return true;
   }
+
+  /*
+  * Returns true if all alpha chars in the string are uppercases
+  * Example: "1234" -> true
+  * Example: "34N4" -> true
+  * Example: "34n" -> false
+  */
+  bool is_upper(const string& str) {
+    for(char c : str)
+      if(isalpha(c))
+        if(!isupper(c))
+          return false;
+    return true;
+  }
 } // stringplus
 
 #endif // STRINGPLUS_H
