@@ -167,6 +167,24 @@ namespace stringplus {
     ret_val.shrink_to_fit(); // removes the unused spaces from the vector
     return ret_val;
   }
+
+  /**
+  * Trims and replaces multiple spaces with a single space.
+  *
+  * @example " foo    bar   " => "foo bar"
+  */
+  string clean(const string& str) {
+    string ret_val = str;
+    for(auto it = ret_val.begin(); *it == ' ';)
+      ret_val.erase(it);
+    for(auto it = ret_val.end() - 1; *it == ' '; it--)
+      ret_val.erase(it);
+    for (auto first_it = ret_val.begin(); first_it != ret_val.end(); first_it++)
+      if (*first_it == ' ')
+        for (auto second_it = first_it + 1; *second_it == ' ' ; second_it = first_it + 1)
+          ret_val.erase(second_it);
+    return ret_val;
+  }
 } // stringplus
 
 #endif // STRINGPLUS_H
