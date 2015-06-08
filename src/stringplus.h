@@ -21,7 +21,7 @@ namespace stringplus {
   /**
   * Replaces lower case alphabetical chars with upper case.
   *
-  * @example "abcd" "ABCD"
+  * @example "abcd" => "ABCD"
   */
   string to_upper(const string& str) {
     string ret_val = str;
@@ -32,7 +32,7 @@ namespace stringplus {
   /**
   * Replaces upper case alphabetical chars with lower case.
   *
-  * @example "ABCD" 'abcd'
+  * @example "ABCD" => 'abcd'
   */
   string to_lower(const string& str) {
     string ret_val = str;
@@ -43,12 +43,12 @@ namespace stringplus {
   /**
   * Returns true if all chars in the string are alphabetical.
   *
-  * @example "abcd" true
-  * @example "Abn4" false
+  * @example "abcd" => true
+  * @example "Abn4" => false
   */
   bool is_alpha(const string& str) {
-    for(char c : str)
-      if(!isalpha(c))
+    for (char c : str)
+      if (!isalpha(c))
         return false;
     return true;
   }
@@ -56,12 +56,12 @@ namespace stringplus {
   /**
   * Returns true if all chars in the string are digits.
   *
-  * @example "1234" true
-  * @example "34n4" false
+  * @example "1234" => true
+  * @example "34n4" => false
   */
   bool is_digit(const string& str) {
-    for(char c : str)
-      if(!isdigit(c))
+    for (char c : str)
+      if (!isdigit(c))
         return false;
     return true;
   }
@@ -69,13 +69,13 @@ namespace stringplus {
   /**
   * Returns true if all chars in the string are digits or an uppercase or lowercase letter.
   *
-  * @example "1234" true
-  * @example "34n4" true
-  * @example "34n[" false
+  * @example "1234" => true
+  * @example "34n4" => true
+  * @example "34n[" => false
   */
   bool is_alpha_digit(const string& str) {
-    for(char c : str)
-      if(!isalnum(c))
+    for (char c : str)
+      if (!isalnum(c))
         return false;
     return true;
   }
@@ -83,14 +83,14 @@ namespace stringplus {
   /**
   * Returns true if all alpha chars in the string are lowercases.
   *
-  * @example "1234" true
-  * @example "34n4" true
-  * @example "34M" false
+  * @example "1234" => true
+  * @example "34n4" => true
+  * @example "34M" => false
   */
   bool is_lower(const string& str) {
-    for(char c : str)
-      if(isalpha(c))
-        if(!islower(c))
+    for (char c : str)
+      if (isalpha(c))
+        if (!islower(c))
           return false;
     return true;
   }
@@ -98,14 +98,14 @@ namespace stringplus {
   /**
   * Returns true if all alpha chars in the string are uppercases.
   *
-  * @example "1234" true
-  * @example "34N4" true
-  * @example "34n" false
+  * @example "1234" => true
+  * @example "34N4" => true
+  * @example "34n" => false
   */
   bool is_upper(const string& str) {
-    for(char c : str)
-      if(isalpha(c))
-        if(!isupper(c))
+    for (char c : str)
+      if (isalpha(c))
+        if (!isupper(c))
           return false;
     return true;
   }
@@ -115,14 +115,14 @@ namespace stringplus {
   *
   * @param lower_case_reset bool If true is passed, the rest of the string will be converted to lower case.
   *
-  * @example "abcd" "Abcd"
-  * @example "aBCD" "ABCD"
-  * @example "aBCD", true "Abcd"
+  * @example "abcd" => "Abcd"
+  * @example "aBCD" => ABCD"
+  * @example "aBCD", true => "Abcd"
   */
   string capitalize(const string& str, bool lower_case_reset = false) {
     string ret_val = str;
     ret_val[0] = toupper(ret_val[0]);
-    if(lower_case_reset)
+    if (lower_case_reset)
       for_each(ret_val.begin() + 1, ret_val.end(), [](char& c) {
         c = tolower(c);
       });
@@ -132,11 +132,39 @@ namespace stringplus {
   /**
   * Converts first letter of the string to lowercase.
   *
-  * @example "ABCD" "aBCD"
+  * @example "ABCD" => "aBCD"
   */
   string decapitalize(const string& str) {
     string ret_val = str;
     ret_val[0] = tolower(ret_val[0]);
+    return ret_val;
+  }
+
+  /**
+  * Chops the string to a vector.
+  *
+  * @param step int Chops the string with this step.
+  *
+  * @return vector<string> The vector that contains choped pieces.
+  *
+  * @example "whitespace", 3 => ["whi", "tes", "pac", "e"]
+  */
+  vector<string> chop(const string& str, int step) {
+    vector<string> ret_val;
+    int step_counter = 0;
+    string step_string = ""; // contains every step's string
+    for (char c : str) {
+      if (step_counter < step) {
+        step_string += c;
+        step_counter++;
+      } else {
+        ret_val.push_back(step_string);
+        step_string = c;
+        step_counter = 1;
+      }
+    }
+    ret_val.push_back(step_string); // adds the last step string to the vector
+    ret_val.shrink_to_fit(); // removes the unused spaces from the vector
     return ret_val;
   }
 } // stringplus
