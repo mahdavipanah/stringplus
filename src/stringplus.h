@@ -1,4 +1,4 @@
-/*
+/**
 *   stringplus library - Funny and minimal string library, inspired by underscore.string
 *   License: MIT License
 *   C++ version: C++11
@@ -18,9 +18,10 @@ using namespace std;
 // this namespace contains the functions for having fun with strings
 namespace stringplus {
 
-  /*
-  * Replaces lower case alphabetical chars with upper case
-  * Example: "abcd" -> 'ABCD'
+  /**
+  * Replaces lower case alphabetical chars with upper case.
+  *
+  * @example "abcd" "ABCD"
   */
   string to_upper(const string& str) {
     string ret_val = str;
@@ -28,9 +29,10 @@ namespace stringplus {
     return ret_val;
   }
 
-  /*
-  * Replaces upper case alphabetical chars with lower case
-  * Example: "ABCD" -> 'abcd'
+  /**
+  * Replaces upper case alphabetical chars with lower case.
+  *
+  * @example "ABCD" 'abcd'
   */
   string to_lower(const string& str) {
     string ret_val = str;
@@ -38,10 +40,11 @@ namespace stringplus {
     return ret_val;
   }
 
-  /*
-  * Returns true if all chars in the string are alphabetical
-  * Example: "abcd" -> true
-  * Example: "Abn4" -> false
+  /**
+  * Returns true if all chars in the string are alphabetical.
+  *
+  * @example "abcd" true
+  * @example "Abn4" false
   */
   bool is_alpha(const string& str) {
     for(char c : str)
@@ -50,10 +53,11 @@ namespace stringplus {
     return true;
   }
 
-  /*
-  * Returns true if all chars in the string are digits
-  * Example: "1234" -> true
-  * Example: "34n4" -> false
+  /**
+  * Returns true if all chars in the string are digits.
+  *
+  * @example "1234" true
+  * @example "34n4" false
   */
   bool is_digit(const string& str) {
     for(char c : str)
@@ -62,11 +66,12 @@ namespace stringplus {
     return true;
   }
 
-  /*
-  * Returns true if all chars in the string are digits or an uppercase or lowercase letter
-  * Example: "1234" -> true
-  * Example: "34n4" -> true
-  * Example: "34n[" -> false
+  /**
+  * Returns true if all chars in the string are digits or an uppercase or lowercase letter.
+  *
+  * @example "1234" true
+  * @example "34n4" true
+  * @example "34n[" false
   */
   bool is_alpha_digit(const string& str) {
     for(char c : str)
@@ -75,11 +80,12 @@ namespace stringplus {
     return true;
   }
 
-  /*
-  * Returns true if all alpha chars in the string are lowercases
-  * Example: "1234" -> true
-  * Example: "34n4" -> true
-  * Example: "34M" -> false
+  /**
+  * Returns true if all alpha chars in the string are lowercases.
+  *
+  * @example "1234" true
+  * @example "34n4" true
+  * @example "34M" false
   */
   bool is_lower(const string& str) {
     for(char c : str)
@@ -89,11 +95,12 @@ namespace stringplus {
     return true;
   }
 
-  /*
-  * Returns true if all alpha chars in the string are uppercases
-  * Example: "1234" -> true
-  * Example: "34N4" -> true
-  * Example: "34n" -> false
+  /**
+  * Returns true if all alpha chars in the string are uppercases.
+  *
+  * @example "1234" true
+  * @example "34N4" true
+  * @example "34n" false
   */
   bool is_upper(const string& str) {
     for(char c : str)
@@ -103,12 +110,14 @@ namespace stringplus {
     return true;
   }
 
-  /*
-  * Converts first letter of the string to uppercase
-  * If true is passed as second argument the rest of the string will be converted to lower case
-  * Example: "abcd" -> "Abcd"
-  * Example: "aBCD" -> "ABCD"
-  * Example: lower_case_reset = true: "aBCD" -> "Abcd"
+  /**
+  * Converts first letter of the string to uppercase.
+  *
+  * @param lower_case_reset bool If true is passed, the rest of the string will be converted to lower case.
+  *
+  * @example "abcd" "Abcd"
+  * @example "aBCD" "ABCD"
+  * @example "aBCD", true "Abcd"
   */
   string capitalize(const string& str, bool lower_case_reset = false) {
     string ret_val = str;
@@ -120,9 +129,10 @@ namespace stringplus {
     return ret_val;
   }
 
-  /*
-  * Converts first letter of the string to lowercase
-  * Example: "ABCD" -> "aBCD"
+  /**
+  * Converts first letter of the string to lowercase.
+  *
+  * @example "ABCD" "aBCD"
   */
   string decapitalize(const string& str) {
     string ret_val = str;
