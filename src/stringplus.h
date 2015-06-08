@@ -185,6 +185,21 @@ namespace stringplus {
           ret_val.erase(second_it);
     return ret_val;
   }
+
+  /**
+  * Returns a copy of the string in which all the case-based characters have had their case swapped.
+  *
+  * @example "hELLO" => "Hello"
+  */
+  string swap_case(const string& str) {
+    string ret_val = str;
+    for(char& c : ret_val)
+      if(isupper(c))
+        c = tolower(c);
+      else if(islower(c))
+        c = toupper(c);
+    return ret_val;
+  }
 } // stringplus
 
 #endif // STRINGPLUS_H
