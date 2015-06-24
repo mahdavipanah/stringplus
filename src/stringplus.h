@@ -33,6 +33,7 @@ namespace stringplus {
   string reverse(const string&);
   string truncate(const string&, int, const string& = "...");
   string surround(const string&, const string&);
+  string repeat(const string&, int, const string& = "");
 } // stringplus
 
 #endif // STRINGPLUS_H

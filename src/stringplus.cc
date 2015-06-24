@@ -238,4 +238,17 @@ namespace stringplus {
   string surround(const string& str, const string& wrap) {
     return wrap+str+wrap;
   }
+
+  /**
+  * Repeats a string count times, seperated by given string.
+  *
+  * @example "foo", 3, "bar" => "foobarfoobarfoo"
+  */
+  string repeat(const string& str, int count, const string& seperator) {
+    string ret_val;
+    for (int i = 1; i < count; i++)
+      ret_val += str+seperator;
+    ret_val += str;
+    return ret_val;
+  }
 } // stringplus
