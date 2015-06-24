@@ -114,7 +114,7 @@ namespace stringplus {
   * @example "aBCD" => ABCD"
   * @example "aBCD", true => "Abcd"
   */
-  string capitalize(const string& str, bool lower_case_reset = false) {
+  string capitalize(const string& str, bool lower_case_reset) {
     string ret_val = str;
     ret_val[0] = toupper(ret_val[0]);
     if (lower_case_reset)

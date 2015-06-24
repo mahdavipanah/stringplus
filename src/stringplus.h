@@ -25,7 +25,7 @@ namespace stringplus {
   bool is_alpha_digit(const string&);
   bool is_lower(const string&);
   bool is_upper(const string&);
-  string capitalize(const string&, bool);
+  string capitalize(const string&, bool = false);
   string decapitalize(const string&);
   vector<string> chop(const string&, int);
   string clean(const string&);
