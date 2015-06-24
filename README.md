@@ -126,7 +126,7 @@ stringplus::decapitalize("ABCd");
 // => "aBCD"
 ```
 
-#### chop(string, int step) => std::vector/<string/>
+#### chop(string, int step) => std::vector\<string\>
 Chops the string to a vector with the given step.
 
 ```C++
@@ -138,6 +138,14 @@ stringplus::chop("whitespace", 3);
 Trim and replace multiple spaces with a single space.
 
 ```C++
-stringplus::clean( foo    bar   ");
+stringplus::clean(" foo    bar   ");
 // => "foo bar"
+```
+
+#### swap_case(string) => string
+Returns a copy of the string in which all the case-based characters have had their case swapped.
+
+```C++
+stringplus::swap_case("hELLO");
+// => "Hello"
 ```
