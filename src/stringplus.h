@@ -35,6 +35,7 @@ namespace stringplus {
   string surround(const string&, const string&);
   string repeat(const string&, int, const string& = "");
   string pad(const string&, int, char = ' ', string = "left");
+  string lpad(const string&, int, char = ' ');
 } // stringplus
 
 #endif // STRINGPLUS_H

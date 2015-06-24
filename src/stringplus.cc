@@ -282,4 +282,13 @@ namespace stringplus {
     }
     return ret_val;
   }
+
+  /**
+  * left-pad a string. Alias for pad(string, int, char, "left")
+  *
+  * @exmaple "1", 8, '0' => "00000001"
+  */
+  string lpad(const string& str, int length, char pad_char) {
+    return pad(str, length, pad_char, "left");
+  }
 } // stringplus
