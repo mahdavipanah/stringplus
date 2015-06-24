@@ -30,6 +30,7 @@ namespace stringplus {
   vector<string> chop(const string&, int);
   string clean(const string&);
   string swap_case(const string&);
+  string reverse(const string&);
 } // stringplus
 
 #endif // STRINGPLUS_H

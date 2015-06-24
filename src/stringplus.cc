@@ -195,4 +195,16 @@ namespace stringplus {
         c = toupper(c);
     return ret_val;
   }
+
+  /**
+  * Returns reversed string.
+  *
+  * @example "Hello" => "olleH"
+  * @example "12345" => "54321"
+  */
+  string reverse(const string& str) {
+    string ret_val = str;
+    reverse(ret_val.begin(), ret_val.end()); // Using std::reverse
+    return ret_val;
+  }
 } // stringplus
