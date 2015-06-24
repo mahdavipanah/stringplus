@@ -231,9 +231,9 @@ namespace stringplus {
   }
 
   /**
+  * Surrounds a string with another string.
   *
-  *
-  *
+  * @example "foo", "bar" => "barfoobar"
   */
   string surround(const string& str, const string& wrap) {
     return wrap+str+wrap;
