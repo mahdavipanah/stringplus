@@ -211,3 +211,11 @@ stringplus::pad("1", 8, "0", "right");
 stringplus::pad("1", 8, "0", "both");
 // => "00001000"
 ```
+#### lpad(string, int, [char]) => string
+
+left-pad a string. Alias for pad(string, int, char, "left")
+
+```C++
+stringplus::lpad("1", 8, "0");
+// => "00000001"
+```
