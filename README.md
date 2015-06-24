@@ -225,3 +225,10 @@ right-pad a string. Alias for pad(string, int, char, "right")
 stringplus::rpad("1", 8, "0");
 // => "10000000"
 ```
+#### lrpad(string, int, [char]) => string
+left/right-pad a string. Alias for pad(string, int, char, "both")
+
+```C++
+stringplus::lrpad("1", 8, "0");
+// => "00001000"
+```
