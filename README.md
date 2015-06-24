@@ -31,3 +31,11 @@ Replaces lower case alphabetical chars with upper case.
 stringplus::to_upper("foo bar");
 // => "FOO BAR"
 ```
+
+#### to_lower(string) => string
+Replaces upper case alphabetical chars with lower case.
+
+```C++
+stringplus::to_lower("FOO BAR");
+// => "foo bar"
+```
