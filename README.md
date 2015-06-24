@@ -75,3 +75,17 @@ stringplus::is_alpha_digit("34n4");
 stringplus::is_alpha_digit("34n[");
 // => false
 ```
+
+#### is_lower(string) => bool
+Returns true if all alpha chars in the string are lowercases.
+
+```C++
+stringplus::is_lower("1234");
+// => true
+
+stringplus::is_lower("34n4");
+// => true
+
+stringplus::is_lower("34M");
+// => false
+```
