@@ -61,3 +61,17 @@ stringplus::is_digit("1234");
 stringplus::is_digit("34n4");
 // => false
 ```
+
+#### is_alpha_digit(string) => bool
+Returns true if all chars in the string are digits or an uppercase or lowercase letter.
+
+```C++
+stringplus::is_alpha_digit("1234");
+// => true
+
+stringplus::is_alpha_digit("34n4");
+// => true
+
+stringplus::is_alpha_digit("34n[");
+// => false
+```
