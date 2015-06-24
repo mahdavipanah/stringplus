@@ -157,7 +157,7 @@ stringplus::swap_case("hELLO");
 #### reverse(string) => string
 Return reversed string:
 
-```
+```C++
 stringplus::reverse("Hello");
 // => "olleH"
 
