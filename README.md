@@ -50,3 +50,14 @@ stringplus::is_alpha("abcd");
 stringplus::is_alpha("Abn4");
 // => false
 ```
+
+#### is_digit(string) => bool
+Returns true if all chars in the string are digits.
+
+```C++
+stringplus::is_digit("1234");
+// => true
+
+stringplus::is_digit("34n4");
+// => false
+```
