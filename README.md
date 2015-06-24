@@ -19,3 +19,15 @@ If you don't want to use the namespace every time:
 ```C++
 using namespace stringplus;
 ```
+
+## API
+
+### Individual functions
+
+#### to_upper(string) => string
+Replaces lower case alphabetical chars with upper case.
+
+```C++
+stringplus::to_upper("foo bar");
+// => "FOO BAR"
+```
