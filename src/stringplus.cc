@@ -252,6 +252,14 @@ namespace stringplus {
     return ret_val;
   }
 
+  /**
+  * pads the string with character until the total string length is equal to the passed length parameter. By default, pads on the left with the space char (" ").
+  *
+  * @example "1", 8 => "       1"
+  * @exmaple "1", 8, '0' => "00000001"
+  * @exmaple "1", 8, '0', "right" => "10000000"
+  * @exmaple "1", 8, '0', "both" => "00001000"
+  */
   string pad(const string& str, int length, char pad_char, string type) {
     if (type != "left" && type != "right" && type != "both")
       type = "left";
