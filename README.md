@@ -9,13 +9,13 @@ With stringplus you can do a lot things to strings! and meanwhile we want the co
 To sake of simplicity, we are holding everything in a single file: stringplus.h <br />
 So you only need to include it once in your code:
 
-```
+```C++
 #include "stringplus.h"
 ```
 
 and then all the functionalities are available in the stringplus namespace. <br />
 If you don't want to use the namespace every time:
 
-```
+```C++
 using namespace stringplus;
 ```
