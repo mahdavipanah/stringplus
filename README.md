@@ -104,7 +104,7 @@ stringplus::is_upper("34n");
 // => false
 ```
 
-#### capitalize(string, [lowercaseRest=false]) => string
+#### capitalize(string, [bool lowercaseRest=false]) => string
 Converts first letter of the string to uppercase. If true is passed as second argument the rest of the string will be converted to lower case.
 
 ```C++
@@ -124,4 +124,12 @@ Converts first letter of the string to lowercase.
 ```C++
 stringplus::decapitalize("ABCd");
 // => "aBCD"
+```
+
+#### chop(string, int step) => std::vector<string>
+Chops the string to a vector with the given step.
+
+```C++
+stringplus::chop("whitespace", 3);
+// => ["whi", "tes", "pac", "e"]
 ```
