@@ -194,3 +194,20 @@ Repeats a string count times, seperated by given string.
 stringplus::repeat("foo", 3, "bar");
 // => "foobarfoobarfoo"
 ```
+
+####pad(string, int, [char = ' ', string = "left"]) => string
+pads the string with character until the total string length is equal to the passed length parameter. By default, pads on the left with the space char (" ").
+
+```C++
+stringplus::pad("1", 8);
+// => "       1"
+
+stringplus::pad("1", 8, "0");
+// => "00000001"
+
+stringplus::pad("1", 8, "0", "right");
+// => "10000000"
+
+stringplus::pad("1", 8, "0", "both");
+// => "00001000"
+```
