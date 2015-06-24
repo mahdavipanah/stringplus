@@ -7,7 +7,6 @@ With stringplus you can do a lot things to strings! and meanwhile we want the co
 ## Usage
 
 To use stringplus you have to include stringplus.h wherever you need it <br />
-So you only need to include it once in your code:
 
 ```C++
 #include "stringplus.h"
@@ -20,7 +19,7 @@ If you don't want to use the namespace every time:
 using namespace stringplus;
 ```
 
-Then you have to compile stringplus.cc. For example:
+Then you have to compile stringplus.cc with your program. For example:
 ```Shell
 g++ main.cc stringplus.cc
 ```
