@@ -108,7 +108,7 @@ stringplus::is_upper("34n");
 // => false
 ```
 
-#### capitalize(string, [bool lowercaseRest=false]) => string
+#### capitalize(string, [bool = false]) => string
 Converts first letter of the string to uppercase. If true is passed as second argument the rest of the string will be converted to lower case.
 
 ```C++
@@ -163,4 +163,18 @@ stringplus::reverse("Hello");
 
 stringplus::reverse("12345");
 // => "54321"
+```
+
+#### truncate(string, int, [string = "..."])
+Truncates the strings with the length greater than the given length with the given string.
+
+```C++
+stringplus::truncate("Hello world", 5)
+// => "Hello..."
+
+stringplus::truncate("Hello", 10)
+// => "Hello"
+
+stringplus::truncate("Hello world", 5, " read more")
+// => "Hello read more"
 ```
