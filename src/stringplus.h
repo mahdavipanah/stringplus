@@ -32,6 +32,7 @@ namespace stringplus {
   string swap_case(const string&);
   string reverse(const string&);
   string truncate(const string&, int, const string& = "...");
+  string surround(const string&, const string&);
 } // stringplus
 
 #endif // STRINGPLUS_H

@@ -209,7 +209,7 @@ namespace stringplus {
   }
 
   /**
-  * Truncates the strings with the length greater than the given length with the given string
+  * Truncates the strings with the length greater than the given length with the given string.
   *
   * @example "Hello world", 5 => "Hello..."
   * @example "Hello", 10 => "Hello"
@@ -228,5 +228,14 @@ namespace stringplus {
     }
     ret_val += truncate_string;
     return ret_val;
+  }
+
+  /**
+  *
+  *
+  *
+  */
+  string surround(const string& str, const string& wrap) {
+    return wrap+str+wrap;
   }
 } // stringplus
