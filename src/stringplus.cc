@@ -207,4 +207,26 @@ namespace stringplus {
     reverse(ret_val.begin(), ret_val.end()); // Using std::reverse
     return ret_val;
   }
+
+  /**
+  * Truncates the strings with the length greater than the given length with the given string
+  *
+  * @example "Hello world", 5 => "Hello..."
+  * @example "Hello", 10 => "Hello"
+  * @example "Hello world", 5, " read more" => "Hello read more"
+  */
+  string truncate(const string& str, int length, const string& truncate_string) {
+    if(str.length() <= length)
+      return str;
+    string ret_val = "";
+    int index = 0;
+    for(char c : str) {
+      if(index == length)
+        break;
+      ret_val += c;
+      index++;
+    }
+    ret_val += truncate_string;
+    return ret_val;
+  }
 } // stringplus

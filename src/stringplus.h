@@ -31,6 +31,7 @@ namespace stringplus {
   string clean(const string&);
   string swap_case(const string&);
   string reverse(const string&);
+  string truncate(const string&, int, const string& = "...");
 } // stringplus
 
 #endif // STRINGPLUS_H
