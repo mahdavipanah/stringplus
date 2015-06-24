@@ -169,12 +169,12 @@ stringplus::reverse("12345");
 Truncates the strings with the length greater than the given length with the given string.
 
 ```C++
-stringplus::truncate("Hello world", 5)
+stringplus::truncate("Hello world", 5);
 // => "Hello..."
 
-stringplus::truncate("Hello", 10)
+stringplus::truncate("Hello", 10);
 // => "Hello"
 
-stringplus::truncate("Hello world", 5, " read more")
+stringplus::truncate("Hello world", 5, " read more");
 // => "Hello read more"
 ```
