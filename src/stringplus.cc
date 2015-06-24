@@ -251,4 +251,27 @@ namespace stringplus {
     ret_val += str;
     return ret_val;
   }
+
+  string pad(const string& str, int length, char pad_char, string type) {
+    if (type != "left" && type != "right" && type != "both")
+      type = "left";
+    bool both_determiner = 0;
+    string ret_val = str;
+    while (ret_val.length() < length) {
+      if (type == "left")
+        ret_val = pad_char + ret_val;
+      else if (type == "right")
+        ret_val = ret_val + pad_char;
+      else {
+        if (both_determiner == 0) {
+          ret_val = pad_char + ret_val;
+          both_determiner = 1;
+        } else {
+          ret_val = ret_val + pad_char;
+          both_determiner = 0;
+        }
+      }
+    }
+    return ret_val;
+  }
 } // stringplus
