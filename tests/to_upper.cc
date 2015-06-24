@@ -1,4 +1,4 @@
-#include "CATCH/catch.hpp"
+#include "Catch/catch.hpp"
 
 #include "../src/stringplus.h"
 using namespace stringplus;
