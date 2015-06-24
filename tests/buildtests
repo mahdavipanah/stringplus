@@ -1,2 +1,2 @@
 #!/bin/sh
-g++ -std=c++11 ../src/stringplus.cc test.cc to_upper.cc to_lower.cc is_alpha.cc is_digit.cc is_alpha_digit.cc  is_lower.cc is_upper.cc -o runtests
+g++ -std=c++11 ../src/stringplus.cc test.cc to_upper.cc to_lower.cc is_alpha.cc is_digit.cc is_alpha_digit.cc  is_lower.cc is_upper.cc capitalize.cc -o runtests
