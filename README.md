@@ -153,3 +153,14 @@ Returns a copy of the string in which all the case-based characters have had the
 stringplus::swap_case("hELLO");
 // => "Hello"
 ```
+
+#### reverse(string) => string
+Return reversed string:
+
+```
+stringplus::reverse("Hello");
+// => "olleH"
+
+stringplus::reverse("12345");
+// => "54321"
+```
