@@ -89,3 +89,17 @@ stringplus::is_lower("34n4");
 stringplus::is_lower("34M");
 // => false
 ```
+
+#### is_upper(string) => bool
+Returns true if all alpha chars in the string are uppercases.
+
+```C++
+stringplus::is_upper("1234");
+// => true
+
+stringplus::is_upper("34N4");
+// => true
+
+stringplus::is_upper("34n");
+// => false
+```
