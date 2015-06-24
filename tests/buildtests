@@ -1,2 +1,2 @@
 #!/bin/sh
-g++ -std=c++11 ../src/stringplus.cc test.cc to_upper.cc to_lower.cc is_alpha.cc is_digit.cc is_alpha_digit.cc  is_lower.cc is_upper.cc capitalize.cc decapitalize.cc chop.cc clean.cc swap_case.cc reverse.cc truncate.cc surround.cc repeat.cc pad.cc lpad.cc rpad.cc -o runtests
+g++ -std=c++11 ../src/stringplus.cc test.cc to_upper.cc to_lower.cc is_alpha.cc is_digit.cc is_alpha_digit.cc  is_lower.cc is_upper.cc capitalize.cc decapitalize.cc chop.cc clean.cc swap_case.cc reverse.cc truncate.cc surround.cc repeat.cc pad.cc lpad.cc rpad.cc lrpad.cc -o runtests
