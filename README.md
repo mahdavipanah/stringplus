@@ -39,3 +39,14 @@ Replaces upper case alphabetical chars with lower case.
 stringplus::to_lower("FOO BAR");
 // => "foo bar"
 ```
+
+#### is_alpha(string) => bool
+Returns true if all chars in the string are alphabetical.
+
+```C++
+stringplus::is_alpha("abcd");
+// => true
+
+stringplus::is_alpha("Abn4");
+// => false
+```
