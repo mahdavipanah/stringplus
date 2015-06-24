@@ -103,3 +103,17 @@ stringplus::is_upper("34N4");
 stringplus::is_upper("34n");
 // => false
 ```
+
+#### capitalize(string, [lowercaseRest=false]) => string
+Converts first letter of the string to uppercase. If true is passed as second argument the rest of the string will be converted to lower case.
+
+```C++
+stringplus::capitalize("abcd");
+// => "Abcd"
+
+stringplus::capitalize("aBCD");
+// => "ABCD"
+
+stringplus::capitalize("aBCD", true);
+// => "Abcd"
+```
