@@ -117,3 +117,11 @@ stringplus::capitalize("aBCD");
 stringplus::capitalize("aBCD", true);
 // => "Abcd"
 ```
+
+#### decapitalize(string) => string
+Converts first letter of the string to lowercase.
+
+```C++
+stringplus::decapitalize("ABCd");
+// => "aBCD"
+```
