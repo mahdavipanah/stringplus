@@ -179,10 +179,18 @@ stringplus::truncate("Hello world", 5, " read more");
 // => "Hello read more"
 ```
 
-#### surround(string, string) =>string
+#### surround(string, string) => string
 Surrounds a string with another string.
 
 ```C++
 stringplus::surround("foo", "bar");
 // => "barfoobar"
+```
+
+#### repeat(string, int, [string = ""]) => string
+Repeats a string count times, seperated by given string.
+
+```C++
+stringplus::repeat("foo", 3, "bar");
+// => "foobarfoobarfoo"
 ```
