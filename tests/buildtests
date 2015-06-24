@@ -1,2 +1,2 @@
 #!/bin/sh
-g++ -std=c++11 ../src/stringplus.cc test.cc to_upper.cc -o runtests
+g++ -std=c++11 ../src/stringplus.cc test.cc to_upper.cc to_lower.cc -o runtests
