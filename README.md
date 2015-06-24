@@ -165,7 +165,7 @@ stringplus::reverse("12345");
 // => "54321"
 ```
 
-#### truncate(string, int, [string = "..."])
+#### truncate(string, int, [string = "..."]) => string
 Truncates the strings with the length greater than the given length with the given string.
 
 ```C++
@@ -177,4 +177,12 @@ stringplus::truncate("Hello", 10);
 
 stringplus::truncate("Hello world", 5, " read more");
 // => "Hello read more"
+```
+
+#### surround(string, string) =>string
+Surrounds a string with another string.
+
+```C++
+stringplus::surround("foo", "bar");
+// => "barfoobar"
 ```
