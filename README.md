@@ -21,7 +21,7 @@ using namespace stringplus;
 
 Then you have to compile stringplus.cc with your program. For example:
 ```Shell
-g++ main.cc stringplus.cc
+g++ -std=c++11 main.cc stringplus.cc
 ```
 
 ## API
