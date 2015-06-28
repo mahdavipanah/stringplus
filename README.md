@@ -248,7 +248,7 @@ stringplus::starts_with(".vimrc", "vim", 1);
 ```
 
 #### ends_with(string str, string, [int = -1]) => bool
-Checks whether the string ends with ends at position (default: str.length).
+Checks whether the string ends with ends at position (default: str.length()).
 
 ```C++
 stringplus::ends_with("image.gif", "gif");
