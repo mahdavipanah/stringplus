@@ -246,3 +246,17 @@ stringplus::starts_with(".vimrc", "vim");
 stringplus::starts_with(".vimrc", "vim", 1);
 // => true
 ```
+
+#### ends_with(string str, string, [int = -1]) => bool
+Checks whether the string ends with ends at position (default: str.length).
+
+```C++
+stringplus::ends_with("image.gif", "gif");
+// => true
+
+stringplus::ends_with("image.old.gif", "old");
+// => false
+
+stringplus::ends_with("image.old.gif", "old", 9);
+// => true
+```
