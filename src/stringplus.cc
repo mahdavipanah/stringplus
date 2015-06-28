@@ -215,11 +215,11 @@ namespace stringplus {
   * @example "Hello", 10 => "Hello"
   * @example "Hello world", 5, " read more" => "Hello read more"
   */
-  string truncate(const string& str, int length, const string& truncate_string) {
+  string truncate(const string& str, unsigned int length, const string& truncate_string) {
     if(str.length() <= length)
       return str;
     string ret_val = "";
-    int index = 0;
+    unsigned int index = 0;
     for(char c : str) {
       if(index == length)
         break;

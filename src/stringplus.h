@@ -31,7 +31,7 @@ namespace stringplus {
   string clean(const string&);
   string swap_case(const string&);
   string reverse(const string&);
-  string truncate(const string&, int, const string& = "...");
+  string truncate(const string&, unsigned int, const string& = "...");
   string surround(const string&, const string&);
   string repeat(const string&, int, const string& = "");
   string pad(const string&, int, char = ' ', string = "left");
