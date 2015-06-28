@@ -260,3 +260,11 @@ stringplus::ends_with("image.old.gif", "old");
 stringplus::ends_with("image.old.gif", "old", 9);
 // => true
 ```
+
+#### join(string, vector\<string\>) => string
+Joins strings together with given separator.
+
+```C++
+stringplus::join(" ", {"foo", "bar"});
+// => "foo bar"
+```
