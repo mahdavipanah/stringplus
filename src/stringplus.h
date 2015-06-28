@@ -34,7 +34,7 @@ namespace stringplus {
   string truncate(const string&, unsigned int, const string& = "...");
   string surround(const string&, const string&);
   string repeat(const string&, int, const string& = "");
-  string pad(const string&, int, char = ' ', string = "left");
+  string pad(const string&, unsigned int, char = ' ', string = "left");
   string lpad(const string&, int, char = ' ');
   string rpad(const string&, int, char = ' ');
   string lrpad(const string&, int, char = ' ');

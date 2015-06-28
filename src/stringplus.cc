@@ -260,7 +260,7 @@ namespace stringplus {
   * @exmaple "1", 8, '0', "right" => "10000000"
   * @exmaple "1", 8, '0', "both" => "00001000"
   */
-  string pad(const string& str, int length, char pad_char, string type) {
+  string pad(const string& str, unsigned int length, char pad_char, string type) {
     if (type != "left" && type != "right" && type != "both")
       type = "left";
     bool both_determiner = 0;
