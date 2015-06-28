@@ -40,6 +40,7 @@ namespace stringplus {
   string lrpad(const string&, int, char = ' ');
   bool starts_with(const string&, const string&, int = 0);
   bool ends_with(const string&, const string&, int = -1);
+  string join(const string&, const vector<string>&);
 } // stringplus
 
 #endif // STRINGPLUS_H

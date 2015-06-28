@@ -337,4 +337,19 @@ namespace stringplus {
       return true;
     return false;
   }
+
+  /**
+  * Joins strings together with given separator.
+  *
+  * @example " ", {"foo", "bar"} => "foo bar"
+  */
+  string join(const string& seperator, const vector<string>& strings) {
+    string ret_val = "";
+    for(auto str = strings.begin(); str != strings.end(); str++) {
+      ret_val += *str;
+      if(str != strings.end() - 1)
+        ret_val += seperator;
+    }
+    return ret_val;
+  }
 } // stringplus
