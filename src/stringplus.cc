@@ -352,4 +352,19 @@ namespace stringplus {
     }
     return ret_val;
   }
+
+  /**
+  * Returns number of occurrences of substring in a string.
+  *
+  * @example "Hello world", "l" => 3
+  */
+  int count(const string& str, const string& substr) {
+    if(substr == "" || str == "")
+      return 0;
+    int ret_val = 0;
+    size_t pos = -1;
+    while((pos = str.find(substr, pos+1)) != string::npos)
+		  ret_val++;
+    return ret_val;
+  }
 } // stringplus

@@ -41,6 +41,7 @@ namespace stringplus {
   bool starts_with(const string&, const string&, int = 0);
   bool ends_with(const string&, const string&, int = -1);
   string join(const string&, const vector<string>&);
+  int count(const string&, const string&);
 } // stringplus
 
 #endif // STRINGPLUS_H
