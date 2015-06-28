@@ -322,4 +322,19 @@ namespace stringplus {
       return true;
     return false;
   }
+
+  /**
+  * Checks whether the string ends with ends at position (default: str.length).
+  *
+  * @example "image.gif", "gif" => true
+  * @example "image.old.gif", "old" => false
+  * @example "image.old.gif", "old", 9 => true
+  */
+  bool ends_with(const string& str, const string& ends, int position) {
+    if(position == -1)
+      position = str.length();
+    if(str.substr(position - ends.length(), ends.length()) == ends)
+      return true;
+    return false;
+  }
 } // stringplus

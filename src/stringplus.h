@@ -11,6 +11,7 @@
 
 #include <string>
 #include <algorithm>
+#include <iostream>
 #include <cctype>
 
 using namespace std;
@@ -39,6 +40,7 @@ namespace stringplus {
   string rpad(const string&, int, char = ' ');
   string lrpad(const string&, int, char = ' ');
   bool starts_with(const string&, const string&, int = 0);
+  bool ends_with(const string&, const string&, int = -1);
 } // stringplus
 
 #endif // STRINGPLUS_H
