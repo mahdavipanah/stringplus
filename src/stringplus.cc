@@ -309,4 +309,17 @@ namespace stringplus {
   string lrpad(const string& str, int length, char pad_char) {
     return pad(str, length, pad_char, "both");
   }
+
+  /**
+  * Checks whether the string begins with starts at position (default: 0).
+  *
+  * @example "image.gif", "image" => true
+  * @example ".vimrc", "vim" => false
+  * @example ".vimrc", "vim", 1 => true
+  */
+  bool starts_with(const string& str, const string& starts, int position) {
+    if(str.substr(position, starts.length()) == starts)
+      return true;
+    return false;
+  }
 } // stringplus

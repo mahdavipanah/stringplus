@@ -38,6 +38,7 @@ namespace stringplus {
   string lpad(const string&, int, char = ' ');
   string rpad(const string&, int, char = ' ');
   string lrpad(const string&, int, char = ' ');
+  bool starts_with(const string&, const string&, int = 0);
 } // stringplus
 
 #endif // STRINGPLUS_H
