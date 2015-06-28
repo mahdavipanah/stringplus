@@ -268,3 +268,11 @@ Joins strings together with given separator.
 stringplus::join(" ", {"foo", "bar"});
 // => "foo bar"
 ```
+
+#### count(string, string) => int
+Returns number of occurrences of substring in a string.
+
+```C++
+stringplus::count("Hello world", "l");
+// => 3
+```
