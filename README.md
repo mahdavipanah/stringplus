@@ -232,3 +232,17 @@ left/right-pad a string. Alias for pad(string, int, char, "both")
 stringplus::lrpad("1", 8, "0");
 // => "00001000"
 ```
+
+#### starts_with(string, string, [int = 0]) => bool
+Checks whether the string begins with starts at position.
+
+```C++
+stringplus::starts_with("image.gif", "image");
+// => true
+
+stringplus::starts_with(".vimrc", "vim");
+// => false
+
+stringplus::starts_with(".vimrc", "vim", 1);
+// => true
+```
