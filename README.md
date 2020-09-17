@@ -1,6 +1,6 @@
 # stringplus
-The aim of this project is not to make a very complicated library. We are trying to make it as simple as possible. Simple but powerful. While [underscore.string][] is a very awesome and professional javascript library for working with strings, we are trying to do things similar.
-With stringplus you can do a lot things to strings! and meanwhile we want the code to be very clean so everyone can read and contribute to it.
+The aim of this project is not to make a very complicated library. I am trying to make it as simple as possible. Simple but powerful. Considering [underscore.string][] is a very awesome javascript library for working with strings, stringplus tries to do things similar.
+
 
 [underscore.string]: https://github.com/epeli/underscore.string "underscore.string github repository"
 
